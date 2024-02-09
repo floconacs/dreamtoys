@@ -1,14 +1,44 @@
+* {
+    margin: 0;
+    padding: 0; /* Optionnel : pour initialiser également les paddings à zéro */
+    box-sizing: border-box; /* Optionnel : pour inclure le padding et le border dans la largeur/hauteur de l'élément */
+}
+
+
 body{
     font-family: 'Protest Strike', sans-serif;
     background-image: linear-gradient(to right,#00c774, #3c38ba);
-
 }
 
 .title{
     text-align: center;
+    font-size: 60px;
 }
 
-body main ul{
+h1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.proj{
+font-size: 50px;
+text-align: center;
+padding: 50px;
+}
+
+.multicolored-text {
+    
+        background: linear-gradient(45deg, #ff0000, #ff8000, #ffea00, #00ff00, #00d6ff, #8000ff, #ff00ff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+  
+}
+
+
+
+body main section ul{
     display: flex;
     list-style: none;
     justify-content: center;
@@ -17,9 +47,10 @@ body main ul{
 }
 
 a {
+    font-size: 25px;
     color: black;
     text-decoration: none;
-    padding: 10px;
+    padding: 50px;
     margin: 0 10px; /* Ajout de marges horizontales pour séparer les liens */
 }
 
@@ -29,30 +60,151 @@ a:hover{
     transition: 1s;
 }
 
-.back_reseau{
-    background-image: url(img/téléchargement.png);
-    background-repeat: no-repeat;
-    position: center;
-    width: 100%;
-    max-width: 100%;
-}
+
 
 .boite_fini {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center; /* Pour centrer horizontalement */
     align-items: center;
     text-align: center;
-    margin-top: 20px; /* Ajout d'une marge pour l'esthétique */
+    margin-top: 20px; 
 }
 
-img {
-    border-radius: 8px;
+.boite_fini > div {
+    flex: 1; /* Pour que les deux divs occupent le même espace */
+}
+
+.boite_fini div .img1 {
     max-width: 100%; 
-    width: 30%;
+    width: 60%;
+    border-radius: 20px;
+}
+
+.boite_fini div .img2 {
+    max-width: 100%; 
+    width: 40%;
+    border-radius: 20px;
+}
+
+.fleche{
+    max-width: 100%;
+    width: 20%;
+    
 }
 
 
-img:hover{
+
+
+
+
+.gauche:hover .img1 {
+    transform: scale(1.5); /* Augmente la taille de l'image de 1.5 fois */
+    transition: transform 1s; /* Ajoute une transition fluide */
+}
+
+.droite:hover .img2 {
+    transform: scale(1.5); /* Augmente la taille de l'image de 1.5 fois */
+    transition: transform 1s; /* Ajoute une transition fluide */
+}
+
+.nous{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nous h2{
+    font-size: 30px;
+    padding-top: 50px;
+}
+
+.nous p{
+
+    max-width: 100%;
     width: 40%;
-    transition: 1s;
+    font-size: 20px;
+}
+
+.pub{
+    max-width: 100%;
+    width: 40%;
+    border-radius: 20px;
+}
+
+.btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 15px 30px; /* Augmentation du padding pour un bouton plus grand */
+    font-size: 40px; /* Augmentation de la taille de la police */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px; /* Augmentation du rayon de la bordure */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    
+.btn:hover {
+      background-color: #45a049;
+}
+
+
+.achat{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.achat h2{
+    font-size: 50px;
+}
+
+.carte{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.ou{
+    font-size: 50px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.carte iframe{
+    max-width: 100%;
+    width: 70%;
+}
+
+footer{
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    padding: 10px;
+    font-size: 22px;
+}
+
+.prec{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.text{
+    padding-top: 30px;
 }
