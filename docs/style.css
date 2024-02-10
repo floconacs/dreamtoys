@@ -211,5 +211,5 @@ footer p{
 
 
 .pub:hover{
-    transform: scale(1.5); 
+    transform: scale(3); 
     transition: transform 1s; 
