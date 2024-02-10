@@ -208,3 +208,8 @@ footer p{
 .text{
     padding-top: 30px;
 }
+
+
+.pub:hover{
+    transform: scale(1.5); 
+    transition: transform 1s; 
